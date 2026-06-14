@@ -6,6 +6,7 @@ build/
 
 # Environment variables (never commit API keys!)
 .env
+.env.file
 .env.local
 .env.development.local
 .env.test.local
