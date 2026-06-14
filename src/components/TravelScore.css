@@ -1,0 +1,53 @@
+.ts-card { display: flex; flex-direction: column; }
+
+.ts-body {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+/* Circle gauge */
+.ts-circle-wrap {
+  position: relative;
+  width: 72px;
+  height: 72px;
+  flex-shrink: 0;
+}
+
+.ts-svg {
+  /* Rotate so arc starts at top */
+  transform: rotate(-90deg);
+  display: block;
+}
+
+.ts-circle-text {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+
+.ts-score-num   { font-size: 19px; font-weight: 600; }
+.ts-score-denom { font-size: 10px; color: rgba(255,255,255,0.38); margin-top: 1px; }
+
+/* Text side */
+.ts-info { flex: 1; }
+
+.ts-label {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.ts-desc {
+  font-size: 13px;
+  color: rgba(255,255,255,0.6);
+  line-height: 1.5;
+}
+
+/* Light mode */
+.light .ts-score-denom { color: rgba(0,0,0,0.38); }
+.light .ts-desc        { color: rgba(0,0,0,0.55); }

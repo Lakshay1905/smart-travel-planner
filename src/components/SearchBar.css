@@ -1,0 +1,94 @@
+.stp-search-container { width: 100%; }
+
+.stp-search-row {
+  display: flex;
+  gap: 8px;
+}
+
+.stp-search-input {
+  flex: 1;
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-size: 15px;
+  color: #fff;
+  outline: none;
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.stp-search-input::placeholder { color: rgba(255,255,255,0.38); }
+
+.stp-search-input:focus {
+  border-color: #1e90ff;
+  background: rgba(30,144,255,0.1);
+}
+
+.stp-search-input:disabled { opacity: 0.5; cursor: not-allowed; }
+
+.stp-search-btn {
+  background: #1e90ff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.2s;
+}
+
+.stp-search-btn:hover:not(:disabled) { background: #1a7de6; }
+.stp-search-btn:disabled { background: rgba(30,144,255,0.38); cursor: not-allowed; }
+
+.stp-search-error {
+  margin-top: 6px;
+  font-size: 13px;
+  color: #ff6b6b;
+}
+
+/* Recent chips */
+.stp-recent-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 8px;
+}
+
+.stp-recent-label {
+  font-size: 11px;
+  color: rgba(255,255,255,0.3);
+}
+
+.stp-recent-chip {
+  font-size: 12px;
+  padding: 3px 10px;
+  border-radius: 20px;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.14);
+  color: rgba(255,255,255,0.65);
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.stp-recent-chip:hover {
+  background: rgba(30,144,255,0.2);
+  color: #fff;
+}
+
+/* Light mode */
+.light .stp-search-input {
+  background: rgba(255,255,255,0.8);
+  border-color: rgba(0,0,0,0.2);
+  color: #0a1628;
+}
+.light .stp-search-input::placeholder { color: rgba(0,0,0,0.35); }
+.light .stp-search-input:focus { border-color: #1e90ff; background: #fff; }
+.light .stp-recent-chip {
+  background: rgba(0,0,0,0.06);
+  border-color: rgba(0,0,0,0.12);
+  color: rgba(0,0,0,0.6);
+}
+.light .stp-recent-chip:hover { background: rgba(30,144,255,0.12); color: #0a1628; }

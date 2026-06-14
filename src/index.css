@@ -1,0 +1,40 @@
+/* ============================================================
+   Global Styles – Smart Travel Planner
+   ============================================================ */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background: #0a1628;
+  color: #e8f4fd;
+  min-height: 100vh;
+}
+
+/* ---- Scrollbar ---- */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: rgba(255,255,255,0.05); }
+::-webkit-scrollbar-thumb { background: rgba(30,144,255,0.4); border-radius: 3px; }
+
+/* ---- Utility ---- */
+.text-muted-light { color: rgba(255,255,255,0.45); }
+.text-accent      { color: #1e90ff; }
+
+/* ---- Spinner animation ---- */
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* ---- Fade-in for results ---- */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+  animation: fadeIn 0.35s ease forwards;
+}

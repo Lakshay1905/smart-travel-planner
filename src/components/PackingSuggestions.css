@@ -1,0 +1,92 @@
+.ps-card { display: flex; flex-direction: column; }
+
+.ps-categories { display: flex; flex-direction: column; gap: 8px; }
+
+/* Group */
+.ps-group {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* Header button */
+.ps-group-header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  background: transparent;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  text-align: left;
+  transition: background 0.15s;
+}
+
+.ps-group-header:hover { background: rgba(255,255,255,0.05); }
+
+.ps-group-emoji { font-size: 16px; }
+
+.ps-group-name {
+  flex: 1;
+  font-size: 13px;
+  font-weight: 500;
+  color: rgba(255,255,255,0.85);
+}
+
+.ps-group-count {
+  font-size: 11px;
+  color: rgba(255,255,255,0.3);
+}
+
+.ps-chevron {
+  font-size: 10px;
+  color: rgba(255,255,255,0.3);
+  margin-left: 4px;
+}
+
+/* Item list */
+.ps-item-list {
+  list-style: none;
+  padding: 4px 14px 12px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  border-top: 1px solid rgba(255,255,255,0.06);
+  margin: 0;
+}
+
+.ps-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  color: rgba(255,255,255,0.72);
+}
+
+.ps-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #1e90ff;
+  flex-shrink: 0;
+}
+
+/* Grid layout for wider screens */
+@media (min-width: 768px) {
+  .ps-categories {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  }
+}
+
+/* Light mode */
+.light .ps-group         { background: rgba(0,0,0,0.03); border-color: rgba(0,0,0,0.08); }
+.light .ps-group-header:hover { background: rgba(0,0,0,0.04); }
+.light .ps-group-name    { color: rgba(0,0,0,0.8); }
+.light .ps-group-count   { color: rgba(0,0,0,0.35); }
+.light .ps-chevron       { color: rgba(0,0,0,0.3); }
+.light .ps-item-list     { border-top-color: rgba(0,0,0,0.06); }
+.light .ps-item          { color: rgba(0,0,0,0.7); }
